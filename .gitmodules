@@ -1,0 +1,3 @@
+[submodule "kalibr"]
+	path = kalibr
+	url = https://github.com/ethz-asl/kalibr.git
