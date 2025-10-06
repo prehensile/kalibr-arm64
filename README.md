@@ -48,7 +48,7 @@ docker run --rm -ti \
 ## Quality of life enhancements
 
 ### Improved entrypoint script
-The [entrypot script](entrypoint.sh) for this container takes care of running `source /catkin_ws/devel/setup.bash` to load the ROS environment for you, before anything passed to `docker run` is executed. This includes, for example, `bash`.
+The [entrypoint script](entrypoint.sh) for this container takes care of running `source /catkin_ws/devel/setup.bash` to load the ROS environment for you, before anything passed to `docker run` is executed. This includes, for example, `bash`.
 
 ### xvfb
 If you intend to use ROS / Kalibr for offline processing, you may find that some tools fail because they are expecting an X display to be available. This can be worked around using [xvfb](https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml), which makes a virtual display available to processes that expect one.
