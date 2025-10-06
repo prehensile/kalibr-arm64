@@ -90,8 +90,11 @@ This will:
 2. Apply Python [cv_bridge compatibility patches](patches.diff), as outlined in [this Stack Overflow answer](https://stackoverflow.com/a/79695710/284475),
 3. Build an ARM64 Docker image:
    1. based on [arm64v8/ros:noetic](https://hub.docker.com/layers/arm64v8/ros/noetic/), as described in this [Raspberry Pi Forum post](https://forums.raspberrypi.com/viewtopic.php?t=388022#p2315851),
-   2. tagged `kalibr:arm64` (a different tag can be specified with the `-t` flag to the `build.sh` script, for example `./build.sh -t some_tag` ),
+   2. tagged `kalibr:arm64`
+      - a different tag can be specified with the `-t` flag to the `build.sh` script, for example `./build.sh -t some_tag`,
 4. Save the image to the current working directory as `kalibr-arm64.tar.gz`
+   - a different output file name can be specified with the `-o` flag to the `build.sh` script, for example `./build.sh -o image_name.tar.gz`.
+
 
 ## Loading the built image
 To load the image on a different ARM64 system (e.g. a Raspberry Pi 5), transfer it over and then run the following command on the target:
